@@ -6,16 +6,31 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "home",
+    redirect: "/home",
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/home",
+    name: "home",
+    meta: { title: "首页" },
+    component: () => import("@/views/home"),
+  },
+  {
+    path: "/category",
+    name: "category",
+    meta: { title: "分类" },
+    component: () => import("@/views/category"),
+  },
+  {
+    path: "/cart",
+    name: "cart",
+    meta: { title: "购物车" },
+    component: () => import("@/views/cart"),
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    meta: { title: "profile" },
+    component: () => import("@/views/profile"),
   },
 ];
 
