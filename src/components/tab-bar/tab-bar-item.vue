@@ -1,12 +1,14 @@
 <template>
-  <div class="App">
-    <router-view />
+  <div class="tab-bar-item">
+    <slot name="icon"></slot>
+    <slot name="title"></slot>
   </div>
+
 </template>
 
 <script>
 export default {
-  name: "App",
+  name: "tabBarItem",
   data() {
     return {};
   },

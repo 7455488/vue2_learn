@@ -1,12 +1,10 @@
 <template>
-  <div class="App">
-    <router-view />
-  </div>
+  <div class="tab-bar"></div>
 </template>
 
 <script>
 export default {
-  name: "App",
+  name: "tabBar",
   data() {
     return {};
   },
